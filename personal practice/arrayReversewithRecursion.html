@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Reverse with Recursion</title>
+    <script>
+        let data=[1,3,55,4,8,7,24,4,89,43,7,0]
+        function arrayReverse(data , start , end){
+            console.log(data)
+
+                if(start<=end){
+                    var temp= data[start]
+                    data[start] = data[end]
+                    data[end]=temp
+                    arrayReverse(data , start+1 , end-1)
+                }
+        }
+
+            arrayReverse(data ,0, data.length-1 )
+           
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

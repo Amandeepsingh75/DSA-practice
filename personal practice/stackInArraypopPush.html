@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack in Array</title>
+    <script>
+        let data =[]
+        let currentSize = data.length
+        let maxValInArray = 5
+        function push(val){
+            if(currentSize>=maxValInArray){
+                alert('hello you are pushing too many values')
+            }else {
+                data[currentSize] = val
+                currentSize+=1
+            }
+          
+            // console.log("values got bigger in number")
+        }
+        function pop(){
+            if(currentSize>0){
+                currentSize-=1
+                data.length = currentSize
+            }
+        }
+
+        console.log(data)
+        push(5)
+        push(54)
+        push(24)
+        push(34)
+        // push(4)
+        pop()
+        pop()
+        push(6)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

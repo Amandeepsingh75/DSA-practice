@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array reverse sort </title>
+    <!--  descending order -->
+    <script>
+                                // Algorithm
+        let data = [1,4,3,6,10,22,3,4,56,43,5,8,7,9]
+        for(let i =0; i<data.length; i++){
+            for(let j=0 ; j<data.length; j++){
+           if(data[j]<data[j+1]){                   // {j=1 > j+1=4  --> no so phle 
+            // console.log(data)                           //1 aayega usme kuch change nhi hoga}
+
+                var temp=data[j]                       // temp = 1
+                data[j]= data[j+1]                    // before j=1 --> after j=4
+                data[j+1]= temp                        // before j+1=4 --> after j+1=1 
+           }
+            }  
+        }
+        console.log(data)
+
+                         
+
+     
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

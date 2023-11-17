@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion simple practice</title>
+    <script>
+                                        //  factorial of array //
+        // function factorial(Val){
+        //     if(Val>0){
+        //         return  Val * factorial(Val-1)
+        //     }else{
+        //         return 1
+        //     }
+        // }
+        // let factorialOf = 4
+        // console.log(factorial(factorialOf))
+
+
+        
+                // sum of number . in factorial we multiply but in this we add values//
+    function sumRange(data){
+          if(data==1) return 1 
+         return data + sumRange(data-1)   // 3+2 , 2+1 and when data is 1 it returns 1 as per if condition
+        }
+    let data = 3
+     console.log(sumRange(data))
+        // answer 3+2+1  == 6
+
+
+
+                            // Just simply print all number like => 5,4,3,2,1  //
+        // function printNumberto5(data){
+        //                 if(data>0){
+        //         console.log(data, ' simple data')
+        //         return  printNumberto5(data-1)
+        //     }
+        // }
+        // let data = 5
+        //     printNumberto5(data)
+       
+
+                                        //  array Reverse  //
+
+        // let data= [1,3,4,2,7,9,5,3]
+        // function arrayReverse(array , start , end){
+        //     console.log(data)
+        //     if(start<=end){
+        //         var temp = data[start]
+        //         data[start] =data[end]
+        //         data[end] = temp
+        //         arrayReverse(data, start+1 , end-1)            
+        // }}
+        // arrayReverse(data , 0 , data.length-1)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

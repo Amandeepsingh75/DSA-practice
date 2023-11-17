@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert new value</title>
+    <!--  insert new value -->
+    <script>
+        // let array2 = [2,3,34,5,32,76,8,87,78,53,0,1,75,735,7,53,2]
+        // short version of inserting array or javascript automade function
+        //    array2.splice(3,0,2002)               // it will not delete any value  3==index (where you want your value) , 
+        // 0 is for delete , 2002 is what number you want to add
+        //    array2.splice(3,1,2002)                   
+        //    console.log(array2)
+
+        // [2,3,4,5,8,9,10]  --> [2,3,4,5,8,9,10,10] --> [2,3,4,5,8,9,9,10] --> [2,3,4,5,8,8,9,10] --> [2,3,4,5,newElement,8,9,10] 
+
+        // function showData() {
+        //     let array = [2, 3, 4, 5, 8, 9, 10]
+        //     console.log(array)
+        //     let position = document.getElementById("position").value
+        //     let newElement = document.getElementById("newElement").value;
+        //     newElement = parseInt(newElement)
+        //     for (let i = array.length - 1; i >= 0; i--) {    // checking from back 
+        //         if (i >= position) {
+        //             array[i + 1] = array[i]                     // push  one value forward
+        //             if (i == position) {
+        //                 array[i] = newElement
+        //             }
+        //         }
+        //     } console.log(array)
+        // }
+
+
+        function insertValue() {
+            let array = [2, 3, 4, 5, 8, 9, 10]
+            console.log(array)
+            let position = 2
+            let newElement = document.getElementById("newElement").value;
+            newElement = parseInt(newElement)
+            var tempVal = array[0];                 
+
+
+            for (let i = 0; i < array.length; i++) {
+                 if (position > i) continue
+
+                if (position == i) {
+                    tempVal = array[i];                 // tempVal=array[2] 
+                    array[i] = newElement;              // --> array[2]=new value usko rkh dege
+                } else {
+                    var temp = array[i]
+                    array[i] = tempVal;
+                    tempVal = temp
+                }
+            }
+            array.push(temp)
+            console.log(array)
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="position">
+    <input type="text" id="newElement">
+    <button onclick="insertValue()">Show Data</button>
+</body>
+
+</html>
+<!--  insert new value -->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove value from array</title>
+    <script>
+
+        // let array =[22,2,3,4,4,45,8,65,64,5]
+        // console.log(array)
+        // document.write(array)
+        // let position = 5
+        // for(let i =5 ; i<array.length; i++){
+        //   array[i]=array[i+1]
+         
+        // } array.length=array.length-1
+        //     console.log(array)
+        //     // document.write(array)
+
+
+                                // remove valur from array with button and input
+const removeElFromArray=()=>{
+        // let array =[22,2,3,4,4,45,8,65,64,5]
+        let array =[11,22,33,44,55]
+        let position= document.getElementById("removeEl").value
+        position=parseInt(position)                     // parseInt is used for changing string into number
+        for(let i = position ; i<array.length; i++){
+            array[i]=array[i+1]
+        
+        }
+        array.length = array.length-1
+        console.log(array)
+    }
+
+    </script>
+</head>
+<body>
+    <input type="text" id="removeEl">
+   <button onclick="removeElFromArray()">Remove element</button>
+</body>
+</html>

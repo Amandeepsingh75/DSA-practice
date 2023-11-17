@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sorting</title>
+    <script>
+        // let data = [1,4,3,6,4,8,3,6,0,3,3,6]
+        // data.sort()                      // js inmade function
+        // console.log(data)
+
+
+        // let data = [1,4,3,6,4,8,3,6,0,3,3,6]
+        // data.sort(function sort(a , b){                      // this is also working
+        //     return a-b
+        // })                           
+        // console.log(data)
+
+
+
+            // By algorithms 
+        let data = [1,4,3,6,10,22,3,4,56,43,5,8,7,9]
+        for(let i =0; i<data.length; i++){
+            for(let j=0 ; j<data.length; j++){
+           if(data[j] >data[j+1]){                   // {j=1 > j+1=4  --> no so phle 
+            // console.log(data)                           //1 aayega usme kuch change nhi hoga}
+
+                var temp=data[j]                       // temp = 1
+                data[j]= data[j+1]                    // before j=1 --> after j=4
+                data[j+1]= temp                        // before j+1=4 --> after j+1=1 
+
+           }
+          
+            }
+           
+        }
+
+        console.log(data)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
